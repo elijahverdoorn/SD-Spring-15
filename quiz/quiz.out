@@ -1,0 +1,54 @@
+Script started on Tue 17 Mar 2015 08:11:16 PM CDT
+rns202-8.cs.stolaf.edu% ./quiz
+a
+b
+c
+d
+e
+f
+g
+h
+i
+calling the insertG function
+a
+b
+c
+d
+e
+f
+g
+xxx
+h
+i
+calling the deleteOther function
+a
+c
+e
+g
+h
+rns202-8.cs.stolaf.edu% ./quiz
+1
+2
+3
+4
+5
+good night
+q
+calling the insertG function
+1
+2
+3
+4
+5
+good
+xxx
+night
+calling the deleteOther function
+1
+3
+5
+xxx
+rns202-8.cs.stolaf.edu% exit
+exit
+
+Script done on Tue 17 Mar 2015 08:12:06 PM CDT

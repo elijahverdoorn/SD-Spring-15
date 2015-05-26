@@ -1,0 +1,158 @@
+*** Driver program for DogArrayP class ***
+
+*** Testing constructors, assignment operator, display() method ***
+
+
+Test of typical constructor:
+  DogArrayP dap1(4);
+  calling dap1.display(cout);
+    output is:
+index name (age)
+
+
+Test of default constructor:
+  DogArrayP dap2;
+  calling dap2.display(cout);
+    output is:
+index name (age)
+
+Defining some Dog objects for further testing...:
+  Dog dog1("Fido", 4);
+  Dog dog2("Lady", 2);
+  Dog dog3("Spot", 5);
+  Dog dog4("Lassie", 10);
+  Dog dog5("Snoopy", 3);
+
+Test of index operator:
+dap1[1] = dog1;
+dap1[2] = dog2;
+calling dap1[1].display(cout);
+  output is:
+Fido(4)
+calling dap1.display(cout);
+  output is:
+index name (age)
+  1  Fido(4)
+  2  Lady(2)
+
+further test of return value from index operator::
+dap1[3].birthday();
+calling dap1.display(cout);
+  output is:
+index name (age)
+  1  Fido(4)
+  2  Lady(2)
+  3  (1)
+
+
+Test of copy constructor:
+  DogArrayP dap3(dap1);
+  calling dap3.display(cout);
+    output is:
+index name (age)
+  1  Fido(4)
+  2  Lady(2)
+  3  (1)
+
+
+Test of assignment operator:
+  DogArrayP dap4(6);
+  dap4[0] = dog3;  dap4[5] = dog4;
+	dap1:	index name (age)
+  1  Fido(4)
+  2  Lady(2)
+  3  (1)
+
+	dap2:	index name (age)
+
+	dap3:	index name (age)
+  1  Fido(4)
+  2  Lady(2)
+  3  (1)
+
+	dap4:	index name (age)
+  0  Spot(5)
+  5  Lassie(10)
+
+
+  calling (dap1 = dap4).display(cout);
+    output is:
+index name (age)
+  0  Spot(5)
+  5  Lassie(10)
+
+  state change:
+	dap1:	index name (age)
+  0  Spot(5)
+  5  Lassie(10)
+
+	dap2:	index name (age)
+
+	dap3:	index name (age)
+  1  Fido(4)
+  2  Lady(2)
+  3  (1)
+
+	dap4:	index name (age)
+  0  Spot(5)
+  5  Lassie(10)
+
+
+  further test of return value from assignment:
+  (dap4 = dap3)[2] = dog5;
+  (dap2 = dap3)[3].birthday();
+  state change:
+	dap1:	index name (age)
+  0  Spot(5)
+  5  Lassie(10)
+
+	dap2:	index name (age)
+  1  Fido(4)
+  2  Lady(2)
+  3  (2)
+
+	dap3:	index name (age)
+  1  Fido(4)
+  2  Lady(2)
+  3  (1)
+
+	dap4:	index name (age)
+  1  Fido(4)
+  2  Snoopy(3)
+  3  (1)
+
+
+
+*** Testing remaining methods ***
+
+
+Test of get_ methods:
+  calling dap1.display(cout);
+    output is:
+index name (age)
+  0  Spot(5)
+  5  Lassie(10)
+
+  dap1.get_size() returns 6.
+final values of all variables:
+	dap1:	index name (age)
+  0  Spot(5)
+  5  Lassie(10)
+
+	dap2:	index name (age)
+  1  Fido(4)
+  2  Lady(2)
+  3  (2)
+
+	dap3:	index name (age)
+  1  Fido(4)
+  2  Lady(2)
+  3  (1)
+
+	dap4:	index name (age)
+  1  Fido(4)
+  2  Snoopy(3)
+  3  (1)
+
+
+

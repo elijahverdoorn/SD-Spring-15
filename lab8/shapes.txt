@@ -1,0 +1,5 @@
+4
+Circle 0 0 0 0 0 0
+Rectangle 0 0 0 0 0 0 0
+Rectangle 0 0 0 0 0 0 0
+Circle 0 0 0 0 0 0

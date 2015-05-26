@@ -1,0 +1,10 @@
+current: MenuItemDriver
+
+MenuItem.o:  MenuItem.cpp MenuItem.h
+	g++ -g -Wall -std=c++11 -c MenuItem.cpp
+
+MenuItemDriver:  MenuItem.o MenuItemDriver.o
+	g++ -g -Wall -std=c++11 -o MenuItemDriver MenuItem.o MenuItemDriver.o
+
+MenuItemDriver.o: MenuItem.o MenuItem.cpp MenuItemDriver.cpp
+	g++ -g -Wall -std=c++11 -c MenuItemDriver.cpp

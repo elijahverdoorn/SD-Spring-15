@@ -1,0 +1,80 @@
+*** Driver program for Dog class ***
+
+*** Testing constructors, assignment operator, display() method ***
+
+
+Test of typical constructor:
+  Dog dog1("Fido", 4);
+  calling dog1.display(cout);
+    output is:
+Fido(4)
+
+Test of default constructor:
+  Dog dog2;
+  calling dog2.display(cout);
+    output is:
+(0)
+
+Test of copy constructor:
+  Dog dog3(dog1);
+  calling dog3.display(cout);
+    output is:
+Fido(4)
+
+Test of assignment operator:
+  Dog dog4("Spot", 6);
+	dog1:	Fido(4)
+	dog2:	(0)
+	dog3:	Fido(4)
+	dog4:	Spot(6)
+
+  calling (dog1 = dog4).display(cout);
+    output is:
+Spot(6)
+  state change:
+	dog1:	Spot(6)
+	dog2:	(0)
+	dog3:	Fido(4)
+	dog4:	Spot(6)
+
+  further test of return value from assignment:
+  (dog4 = dog3).birthday();
+  state change:
+	dog1:	Spot(6)
+	dog2:	(0)
+	dog3:	Fido(4)
+	dog4:	Fido(5)
+
+
+*** Testing remaining methods ***
+
+
+Test of get_ methods:
+  calling dog1.display(cout);
+    output is:
+Spot(6)
+  dog1.get_name() returns Spot.
+  dog1.get_age() returns 6.
+
+Test of set_name and birthday methods:
+  initial values of all variables:
+	dog1:	Spot(6)
+	dog2:	(0)
+	dog3:	Fido(4)
+	dog4:	Fido(5)
+
+  dog3.set_name("Mutt");
+  calling dog3.display(cout);
+    output is:
+Mutt(4)
+  dog1.birthday();
+  calling dog1.display(cout);
+    output is:
+Spot(7)
+  final values of all variables:
+	dog1:	Spot(7)
+	dog2:	(0)
+	dog3:	Mutt(4)
+	dog4:	Fido(5)
+
+

@@ -1,0 +1,19 @@
+18
+Rectangle 128 128 128    5 485   30 50
+Rectangle 0 0 0    8 488   24 44
+Rectangle 128 128 128    40 485   30 50
+Rectangle 0 0 100    43 488   24 44
+Rectangle 128 128 128    75 485   30 50
+Rectangle 0 0 200    78 488   24 44
+Rectangle 128 128 128    110 485   30 50
+Rectangle 0 100 0    113 488   24 44
+Rectangle 128 128 128    145 485   30 50
+Rectangle 0 100 100    148 488   24 44
+Rectangle 128 128 128    180 485   30 50
+Rectangle 0 100 200    183 488   24 44
+Rectangle 128 128 128    215 485   30 50
+Rectangle 0 200 0    218 488   24 44
+Rectangle 128 128 128    250 485   30 50
+Rectangle 0 200 100    253 488   24 44
+Rectangle 128 128 128    285 485   30 50
+Rectangle 0 200 200    288 488   24 44

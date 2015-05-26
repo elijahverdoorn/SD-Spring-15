@@ -1,0 +1,93 @@
+*** Driver program for OwnedDog class ***
+
+*** Testing constructors, assignment operator, display() method ***
+
+
+Test of typical constructor:
+  Dog dog1("Fido", 4);
+  OwnedDog od1(dog1, "Bob");
+  calling od1.display(cout);
+    output is:
+Fido(4)[Bob]
+
+Test of default constructor:
+  OwnedDog od2;
+  calling od2.display(cout);
+    output is:
+(0)[]
+
+Test of copy constructor:
+  OwnedDog od3(od1);
+  calling od3.display(cout);
+    output is:
+Fido(4)[Bob]
+
+Test of assignment operator:
+  Dog dog4("Spot", 6);
+  OwnedDog od4(dog4, "Sue");
+	od1:	Fido(4)[Bob]
+	od2:	(0)[]
+	od3:	Fido(4)[Bob]
+	od4:	Spot(6)[Sue]
+
+  calling (od1 = od4).display(cout);
+    output is:
+Spot(6)[Sue]
+  state change:
+	od1:	Spot(6)[Sue]
+	od2:	(0)[]
+	od3:	Fido(4)[Bob]
+	od4:	Spot(6)[Sue]
+
+  further test of return value from assignment:
+  (od4 = od3).birthday();
+  (od2 = od3).set_owner("Mary");
+  state change:
+	od1:	Spot(6)[Sue]
+	od2:	Fido(4)[Mary]
+	od3:	Fido(4)[Bob]
+	od4:	Fido(5)[Bob]
+
+
+*** Testing remaining methods ***
+
+
+Test of get_ methods:
+  calling od1.display(cout);
+    output is:
+Spot(6)[Sue]
+  od1.get_name() returns Spot.
+  od1.get_age() returns 6.
+  od1.get_owner() returns Sue.
+
+Test of set_ and birthday methods:
+  initial values of all variables:
+	od1:	Spot(6)[Sue]
+	od2:	Fido(4)[Mary]
+	od3:	Fido(4)[Bob]
+	od4:	Fido(5)[Bob]
+
+  od3.set_name("Mutt");
+  calling od3.display(cout);
+    output is:
+Mutt(4)[Bob]
+  od1.set_owner("Jeff");
+  od1.birthday();
+  calling od1.display(cout);
+    output is:
+Spot(7)[Jeff]
+final values of all variables:
+	od1:	Spot(7)[Jeff]
+	od2:	Fido(4)[Mary]
+	od3:	Mutt(4)[Bob]
+	od4:	Fido(5)[Bob]
+
+
+Test of output operator:
+cout << od1 << endl;
+Spot(7)[Jeff]
+
+~OwnedDog() called
+~OwnedDog() called
+~OwnedDog() called
+~OwnedDog() called

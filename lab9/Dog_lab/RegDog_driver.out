@@ -1,0 +1,87 @@
+*** Driver program for RegDog class ***
+
+*** Testing constructors, assignment operator, display() method ***
+
+
+Test of typical constructor:
+  RegDog rdog1("Fido", 4, 1111);
+  calling rdog1.display(cout);
+    output is:
+Fido(4) #1111 
+
+Test of blank at end of display():
+rdog1.display(cout); cout << "XXX" << endl;
+Fido(4) #1111 XXX
+
+Test of default constructor:
+  RegDog rdog2;
+  calling rdog2.display(cout);
+    output is:
+(0) #0 
+
+Test of copy constructor:
+  RegDog rdog3(rdog1);
+  calling rdog3.display(cout);
+    output is:
+Fido(4) #1111 
+
+Test of assignment operator:
+  RegDog rdog4("Spot", 6, 2222);
+	rdog1:	Fido(4) #1111 
+	rdog2:	(0) #0 
+	rdog3:	Fido(4) #1111 
+	rdog4:	Spot(6) #2222 
+
+  calling (rdog1 = rdog4).display(cout);
+    output is:
+Spot(6) #2222 
+  state change:
+	rdog1:	Spot(6) #2222 
+	rdog2:	(0) #0 
+	rdog3:	Fido(4) #1111 
+	rdog4:	Spot(6) #2222 
+
+  further test of return value from assignment:
+  (rdog4 = rdog3).birthday();
+  (rdog2 = rdog3).set_id(5555);
+  state change:
+	rdog1:	Spot(6) #2222 
+	rdog2:	Fido(4) #5555 
+	rdog3:	Fido(4) #1111 
+	rdog4:	Fido(5) #1111 
+
+
+*** Testing remaining methods ***
+
+
+Test of get_ methods:
+  calling rdog1.display(cout);
+    output is:
+Spot(6) #2222 
+  rdog1.get_name() returns Spot.
+  rdog1.get_age() returns 6.
+  rdog1.get_id() returns 2222.
+
+Test of set_ and birthday methods:
+  initial values of all variables:
+	rdog1:	Spot(6) #2222 
+	rdog2:	Fido(4) #5555 
+	rdog3:	Fido(4) #1111 
+	rdog4:	Fido(5) #1111 
+
+  rdog3.set_name("Mutt");
+  calling rdog3.display(cout);
+    output is:
+Mutt(4) #1111 
+  rdog1.set_id(6666);
+  rdog1.birthday();
+  calling rdog1.display(cout);
+    output is:
+Spot(7) #6666 
+final values of all variables:
+	rdog1:	Spot(7) #6666 
+	rdog2:	Fido(4) #5555 
+	rdog3:	Mutt(4) #1111 
+	rdog4:	Fido(5) #1111 
+
+

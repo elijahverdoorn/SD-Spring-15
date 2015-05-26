@@ -1,0 +1,7 @@
+6
+Rectangle 128 128 128    5 5   70 70
+Rectangle 0 0 0    38 38   4 4
+Rectangle 128 128 128    5 80   70 70
+Rectangle 0 0 100    15 100   50 30
+Rectangle 128 128 128    5 155   70 70
+Circle    0 0 100    40 190  25
